@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "poppins";
+  src: url("./../fonts/Poppins-Regular.ttf");
+}
+
+:root {
+  --pink: #e84393;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+  text-decoration: none;
+  transition: 0.2s linear;
+  outline: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden;
+}
+
+/* #################### HEADER STYLE START ###################### */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+header .logo {
+  font-size: 3rem;
+  color: #333;
+  font-weight: bolder;
+}
+
+header .logo span {
+  color: var(--pink);
+}
+
+header .navBar a {
+  font-size: 2rem;
+  color: #666;
+  padding: 1.5rem;
+}
+
+header .navBar a:hover {
+  color: var(--pink);
+}
+
+header .icons a {
+  font-size: 2.5rem;
+  color: #333;
+  margin-left: 1.5rem;
+}
+
+header .icons a:hover {
+  color: var(--pink);
+}
+
+#toggle {
+  display: none;
+}
+
+.fa-bars {
+  font-size: 3rem;
+  cursor: pointer;
+  color: #333;
+  display: none;
+}
+
+/* ############# MEDIA QUERIES ################### */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  header {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+
+  .fa-bars {
+    display: block;
+  }
+
+  header .navBar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background-color: #eee;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    /* clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .header #toggle:checked ~ .navBar {
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
+    background-color: #333;
+  }
+
+  header .navBar a {
+    display: block;
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background-color: #fff;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  }
+}
