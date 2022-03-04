@@ -24,6 +24,25 @@ html {
   overflow-x: hidden;
 }
 
+section {
+  padding: 2rem 9%;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.9rem 3.5rem;
+  color: #fff;
+  background-color: #333;
+  border-radius: 3.5rem;
+  cursor: pointer;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  background-color: var(--pink);
+}
+
 /* #################### HEADER STYLE START ###################### */
 header {
   position: fixed;
@@ -78,6 +97,41 @@ header .icons a:hover {
   color: #333;
   display: none;
 }
+/* #################### HEADER STYLE END ###################### */
+
+/* #################### HOME STYLE START ###################### */
+#home {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background: url("./../images/home-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#home .content {
+  max-width: 50rem;
+}
+
+#home .content h3 {
+  color: #333;
+  font-size: 6rem;
+}
+
+#home .content span {
+  color: var(--pink);
+  font-size: 3.5rem;
+  line-height: 1.5;
+  padding: 1rem 0;
+}
+
+#home .content p {
+  color: #999;
+  font-size: 2rem;
+  line-height: 1.5;
+  padding: 1rem 0;
+}
+/* #################### HOME STYLE END ###################### */
 
 /* ############# MEDIA QUERIES ################### */
 @media (max-width: 991px) {
@@ -105,8 +159,8 @@ header .icons a:hover {
     left: 0;
     background-color: #eee;
     border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
-    /* clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); */
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
   }
 
   .header #toggle:checked ~ .navBar {
